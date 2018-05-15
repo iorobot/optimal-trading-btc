@@ -1,0 +1,25 @@
+language: python
+python:
+
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.5-dev"
+  - "3.6"
+  - "3.6-dev"
+  - "3.7-dev"
+  - "nightly"
+
+before_install:
+  - wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
+  - tar -xvzf ta-lib-0.4.0-src.tar.gz
+  - cd ta-lib/ && ./configure --prefix=/usr LDFLAGS="-lm" && make && sudo make install && cd .. && rm -r ta-lib
+
+# command to install dependencies
+install: "pip3 install argparse pymongo ConfigArgParse TA-Lib"
+
+script:
+    - python3 tests/test.py
+
+after_success:
+    coveralls
