@@ -1,0 +1,26 @@
+# Extensions
+*.html
+*.zip
+*.csv
+*.prof
+
+# Folders
+notebooks/
+__pycache__/
+core/__pycache__/
+core/bots/__pycache__/
+images/mosquito_imgs/
+.idea/
+exchanges/__pycache__/
+exchanges/poloniex/__pycache__/
+strategies/__pycache__/
+notebooks/.ipynb_checkpoints/*
+
+# Files
+config.ini
+mosquito.ini
+images/rendered_plain_small.png
+config.bumblebee.ini
+config.mosquito.ini
+mosquito_ai.ini
+notebooks/.ipynb_checkpoints
