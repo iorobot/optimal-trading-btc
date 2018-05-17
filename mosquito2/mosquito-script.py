@@ -30,7 +30,7 @@ if not args.backtest and not args.live and not args.paper:
     exit(0)
 else:
     # initialize and run Engine
-    engine = Engine(trade_mode_input = 'backtest', plot_input = True, strategy = 'Junior')
+    engine = Engine(trade_mode_input = 'backtest', plot_input = True, strategy = 'bumblebee')
     engine.run() # problems with exit
 
 

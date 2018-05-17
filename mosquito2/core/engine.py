@@ -9,6 +9,7 @@ from core.bots.live import Live
 from core.plot import Plot
 from core.report import Report
 from core.wallet import Wallet
+from sys import exit
 
 
 class Engine:
