@@ -9,6 +9,7 @@ from core.bots.live import Live
 from core.plot import Plot
 from core.report import Report
 from core.wallet import Wallet
+from sys import exit
 
 
 class Engine:
@@ -46,8 +47,23 @@ class Engine:
     first_ticker = None
     last_valid_ticker = None
 
-    def __init__(self):
+    def __init__(self, trade_mode_input = None, plot_input = None, strategy = 'ema'):
         self.args = self.arg_parser.parse_known_args()[0]
+        self.args.strategy = strategy
+
+        # handle debugging initialization
+        if trade_mode_input:
+            if trade_mode_input == 'backtest':
+                self.args.backtest = True
+            elif trade_mode_input == 'paper':
+                self.args.backtest = True
+            elif trade_mode_input == 'live':
+                self.args.live =True
+            else:
+                self.args.backtest = True
+        if plot_input:
+            self.args.plot = plot_input
+
         self.parse_config()
         strategy_class = common.load_module('strategies.', self.args.strategy)
         self.wallet = Wallet()
