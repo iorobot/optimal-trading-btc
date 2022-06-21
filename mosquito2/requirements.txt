@@ -20,7 +20,7 @@ jupyter-core==4.4.0
 lxml==4.2.1
 MarkupSafe==1.0
 nbformat==4.4.0
-numpy==1.14.0
+numpy==1.22.0
 pandas==0.22.0
 plotly==2.3.0
 git+https://github.com/s4w3d0ff/python-poloniex#egg=poloniex
