@@ -25,7 +25,7 @@ pandas==0.22.0
 plotly==2.3.0
 git+https://github.com/s4w3d0ff/python-poloniex#egg=poloniex
 premailer==3.1.1
-protobuf==3.5.2.post1
+protobuf==3.18.3
 pyasn1==0.4.2
 pyasn1-modules==0.2.1
 pymongo==3.6.0
